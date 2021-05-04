@@ -1,7 +1,20 @@
+:root {
+    --color-one: #f8efba;
+    --color-two: #6ab04c;
+    --color-three: #f0f0d6;
+
+    --ff-primary: 'Rancho', cursive;
+    font-size: 20px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header {
+    position: relative;
+    width: 80%;
 }
 li {
     list-style: none;
@@ -9,4 +22,71 @@ li {
 a {
     text-decoration: none;
 }
-
+.logo {
+    width: 100%;
+    height: 160px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--color-one);
+}
+.logo img {
+    width: 540px;
+}
+.nav-bar {
+    width: 100%;
+    height: 40px;
+    display: grid;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+    background-color: var(--color-two);
+}
+.nav-bar ul {
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-gap: 20px; */
+}
+.nav-bar li {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 160px;
+    height: 40px;
+}
+.abs-pos {
+    position: absolute;
+    top: 160px;
+    right: 0;
+}
+.fix-pos {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.nav-bar a {
+    font-family: var(--ff-primary);
+    font-size: 1em;
+    color: var(--color-one);
+}
+.ghost {
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-three);
+}
+main section {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: var(--ff-primary);
+    font-size: 2em;
+    color: var(--color-two);
+}
+main section:nth-child(odd) {
+    background-color: var(--color-three);
+}
+main section:nth-child(even) {
+    background-color: var(--color-one);
+}
