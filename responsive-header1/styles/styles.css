@@ -88,6 +88,7 @@ header {
         height: 60px;
     }
     .container {
+        position: relative;
         padding: 0 20px;
         grid-template-areas: 
             "lgo ... mnu";
@@ -131,7 +132,20 @@ header {
 
     }
     .nav-bar {
-        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #2980b9;
+    }
+    .nav-bar ul {
+        grid-auto-flow: row;
+        grid-gap: 80px;
+        justify-content: center;
+    }
+    .nav-bar li {
+        text-align: center;
     }
 }
 main {
