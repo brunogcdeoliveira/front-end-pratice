@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 li {
     list-style: none;
@@ -33,7 +33,7 @@ header {
     max-width: 1200px;
     height: 100px;
     margin: 0 auto;
-    pad: 0 60px;
+    padding: 0 60px;
     display: grid;
     grid-template-areas: 
         "lgo ... nav";
@@ -79,6 +79,60 @@ header {
     width: 100%;
     height: 100px;
     background-color: #cae1f1;
+}
+@media (max-width: 768px){
+    .max-header {
+        height: 80px;
+    }
+    .min-header {
+        height: 60px;
+    }
+    .container {
+        padding: 0 20px;
+        grid-template-areas: 
+            "lgo ... mnu";
+    }
+    .max-logo img {
+        width: 220px;
+    }
+    .min-logo img {
+        width: 180px;
+    }
+    .menu {
+        grid-area: mnu;
+        display: grid;
+        align-content: center;
+    }
+    .hamburger {
+        position: relative;
+        width: 28px;
+        height: 3px;
+        background-color: #c5eff7;
+        cursor: pointer;
+    }
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #c5eff7;
+
+    }
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #c5eff7;
+
+    }
+    .nav-bar {
+        display: none;
+    }
 }
 main {
     font-size: 20px;
